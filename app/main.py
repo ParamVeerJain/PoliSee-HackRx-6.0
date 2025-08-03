@@ -1,8 +1,16 @@
-#main.py
 from fastapi import FastAPI, Form
-from graph import build_claim_graph
+from fastapi.middleware.cors import CORSMiddleware
+from app.graph import build_claim_graph
 
 app = FastAPI(title="PoliSee - HackRx")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"],  
+)
 
 claim_graph = build_claim_graph()
 

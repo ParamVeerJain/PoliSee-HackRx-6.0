@@ -1,4 +1,4 @@
-from utils.vector_store_loader import load_vectorstore
+from app.utils.vector_store_loader import load_vectorstore
 
 async def clause_retrieval_node(state):
     vectorstore = load_vectorstore()

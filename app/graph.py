@@ -1,9 +1,9 @@
 from typing import TypedDict, Dict, Any, List
 from langgraph.graph import StateGraph
-from nodes.entity_extraction import entity_extraction_node
-from nodes.clause_retrieval import clause_retrieval_node
-from nodes.decision_engine import decision_engine_node
-from nodes.output_formatter import output_formatter_node
+from app.nodes.entity_extraction import entity_extraction_node
+from app.nodes.clause_retrieval import clause_retrieval_node
+from app.nodes.decision_engine import decision_engine_node
+from app.nodes.output_formatter import output_formatter_node
 
 # Define pipeline state schema
 class ClaimState(TypedDict):
